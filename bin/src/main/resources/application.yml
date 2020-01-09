@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver 
+    url: jdbc:mysql://localhost:3306/rest_spring?serverTimezone=UTC
+    username: luis
+    password: newborn
+  
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+
+# if doesn't work, use:  SET GLOBAL time_zone = '-3:00'; in the mysqlConsole.
