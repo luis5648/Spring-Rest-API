@@ -1,8 +1,12 @@
 import React from 'react'
+import './Menu.css';
 
 
 
 class Menu extends React.Component{
+
+    
+
 
     constructor(){
         super();
@@ -14,7 +18,7 @@ class Menu extends React.Component{
 
     componentDidMount(){
         fetch('https://ghibliapi.herokuapp.com/films')
-        .then(result=>result.json())
+        .then(res=>res.json())
         .then(data=>this.setState({
             done:true,
             data
@@ -26,19 +30,35 @@ class Menu extends React.Component{
     
 
     render(){
-      const films =  this.state.data.map((data,i) =>{
-            return(
-                <li>{data.title}</li>
-            )
-        })
         
+        const datosImportantes =  this.state.data.map((data,i) =>{
+            return(
+                <tr key={i}> 
+                   <td>{data.title}</td> 
+                   <td>{data.description}</td> 
+                </tr>
+                
 
+            )
+        });
+        
         return(
-        <nav>
-            <ul>
-                {films}
-            </ul>
-        </nav>
+        <div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                   {datosImportantes}
+                </tbody>
+                
+            </table>
+        </div>
         ) 
     }
 }
