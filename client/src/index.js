@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Menu from './components/Menu';
 
-ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+//const elemento = <h1>Holis</h1>
+
+const contenedor = document.getElementById('root') //Se optiene del html donde se va a mostrar
+
+//ReactDOM.render(loQueSeVaAMostrar, DondeSeMostrara)
+
+ReactDOM.render(<Menu />,contenedor)
+
+
