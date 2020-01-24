@@ -5,9 +5,6 @@ import './Menu.css';
 
 class Menu extends React.Component{
 
-    
-
-
     constructor(){
         super();
         this.state = {
@@ -23,11 +20,7 @@ class Menu extends React.Component{
             done:true,
             data
         }))
-    }
-
-
-    
-    
+    }    
 
     render(){
         
