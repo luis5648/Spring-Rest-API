@@ -1,4 +1,5 @@
 import React from 'react'
+import LeftBarr from './LeftBarr';
 import './Menu.css';
 
 
@@ -20,24 +21,24 @@ class Menu extends React.Component{
             done:true,
             data
         }))
-    }    
+    }
 
     render(){
-        
+
         const datosImportantes =  this.state.data.map((data,i) =>{
             return(
-                <tr key={i}> 
-                   <td>{data.title}</td> 
-                   <td>{data.description}</td> 
+                <tr key={i}>
+                   <td>{data.title}</td>
+                   <td>{data.description}</td>
                 </tr>
-                
+
 
             )
         });
-        
+
         return(
         <div>
-
+            <LeftBarr />
             <table>
                 <thead>
                     <tr>
@@ -49,10 +50,10 @@ class Menu extends React.Component{
                 <tbody>
                    {datosImportantes}
                 </tbody>
-                
+
             </table>
         </div>
-        ) 
+        )
     }
 }
 
